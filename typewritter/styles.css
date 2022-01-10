@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background-color: #282A36;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: rgba(80, 250, 123, 1);
+  text-align: center;
+  line-height: 150%;
+  max-width: 70%;
+}
+
+.title::after {
+  content: "|";
+  margin-left: 5px;
+  opacity: 0;
+  animation: blink .8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+}
